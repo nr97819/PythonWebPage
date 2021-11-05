@@ -11,7 +11,7 @@ def main():
 @app.route('/register', methods=['GET','POST'])
 def register():
 	if request.method =='GET':
-		return render_templ	ate('register.html')
+		return render_template('register.html')
 		
 	elif request.method =='POST':
 		# id=request.form.get('inputId')
@@ -21,7 +21,8 @@ def register():
 		inputPw=request.args.get('inputPw')
 		str = '%s' % inputId
 		str += '%s' % inputPw
-		return str
+		
+		return render_template('index.html', str=str)
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', debug=True)
