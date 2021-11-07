@@ -6,6 +6,8 @@ def index_creator(ch):
 list_data = 'SangWoo, Cho'
 
 func1 = index_creator('h5')
+
 print(func1)
+
 func1(list_data)
 
