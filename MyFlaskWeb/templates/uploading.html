@@ -11,25 +11,14 @@
 <body>
     <div class = "container">
         <div class="row mt-5">
-            <h1>회원가입</h1>
+            <h1>진단서 업로드</h1>
         </div>
 
         <div class="col-12">
             <br><br>
-            <form method="POST" action="http://http://10.90.2.40:5000/register?inputId=stringValue&inputPw=testtest">
-                <div class="form-group">
-                    <label for="userid">아이디</label>
-                    <input type="text" class="form-control" id="userid" placeholder="아이디" name="userid"/>
-                </div>
-                <div class="form-group">
-                    <label for="password">비밀번호</label>
-                    <input type="password" class="form-control" id="password" placeholder="비밀번호" name="password"/>
-                </div>
-                <div class="form-group">
-                    <label for="re_password">비밀번호 확인</label>
-                    <input type="password" class="form-control" id="re_password" placeholder="비밀번호 확인" name="re_password"/>
-                </div>
-                <button type="submit" class="btn btn-primary">제출</button>
+            <form action="http://10.90.2.40:5000/" method="post" enctype="multipart/form-data">
+                <input type="file" name="profile">
+                <input type="submit">
             </form>
         </div>
         
